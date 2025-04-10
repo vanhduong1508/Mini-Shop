@@ -1,0 +1,143 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  h1, h3 {
+    text-align: center;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product-item {
+    background: white;
+    color: black;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="number"] {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #0083b0, #00b4db);
+  }
+  
+  .cart {
+    background: white;
+    color: black;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  }
+  
+  #cart-items div {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .cancel-btn {
+    background: #ccc;
+    color: black;
+    margin-top: 10px;
+  }
+  
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    animation: fadeIn 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  
+  @media (max-width: 768px) {
+    .product-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-item {
+      width: 90%;
+    }
+  }
+  

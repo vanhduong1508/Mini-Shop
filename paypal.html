@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>PayPal - Thanh toán</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #003087;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .box {
+      background: white;
+      color: #003087;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      text-align: center;
+      max-width: 300px;
+    }
+    .box h2 {
+      margin-bottom: 20px;
+    }
+    .loading {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Đang xử lý qua PayPal...</h2>
+    <div class="loading">🔁 Vui lòng chờ vài giây...</div>
+    <script>
+      setTimeout(() => {
+        window.location.href = "thankyou.html";
+      }, 3000);
+    </script>
+  </div>
+</body>
+</html>

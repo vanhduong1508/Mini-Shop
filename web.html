@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Shop</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Danh sách sản phẩm</h1>
+    <div class="product-list" id="product-list">
+      <div class="product-item">
+        <img src="assets/images/balo.jpg" alt="Sản phẩm 1" />
+        <h2>Balo thời trang</h2>
+        <p>Giá: 25$</p>
+        <input type="number" value="1" min="1" id="qty-1">
+        <button onclick="addToCart(1)">Mua ngay</button>
+      </div>
+      <div class="product-item">
+        <img src="assets/images/giay_sneaker.jpg" alt="Sản phẩm 2" />
+        <h2>Giày sneaker</h2>
+        <p>Giá: 30$</p>
+        <input type="number" value="1" min="1" id="qty-2">
+        <button onclick="addToCart(2)">Mua ngay</button>
+      </div>
+      <div class="product-item">
+        <img src="assets/images/tai_nghe.jpg" alt="Sản phẩm 3" />
+        <h2>Tai nghe Bluetooth</h2>
+        <p>Giá: 15$</p>
+        <input type="number" value="1" min="1" id="qty-3">
+        <button onclick="addToCart(3)">Mua ngay</button>
+      </div>
+    </div>
+
+    <div class="cart">
+      <h3>🛒 Giỏ hàng</h3>
+      <div id="cart-items"></div>
+      <p class="cart-total" id="cart-total">Tổng: 0 sản phẩm - $0</p>
+      <button onclick="clearCart()">🗑️ Xoá tất cả</button>
+      <button onclick="openModal()">💳 Thanh toán</button>
+    </div>
+  </div>
+
+  <!-- Modal thanh toán -->
+  <div class="modal" id="checkout-modal">
+    <div class="modal-content">
+      <h2>Thông tin thanh toán</h2>
+      <input type="text" id="fullname" placeholder="Họ và tên" />
+      <input type="text" id="address" placeholder="Địa chỉ giao hàng" />
+      <input type="text" id="otp" placeholder="Mã OTP (demo: 123456)" />
+      <div style="margin-top: 10px;">
+        <button onclick="redirectPayment('vnpay')">VNPay</button>
+        <button onclick="redirectPayment('paypal')">PayPal</button>
+      </div>
+      <button onclick="closeModal()" class="cancel-btn">❌ Hủy</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">Thêm vào giỏ hàng thành công!</div>
+  <script src="assets/script/script.js"></script>
+</body>
+</html>
